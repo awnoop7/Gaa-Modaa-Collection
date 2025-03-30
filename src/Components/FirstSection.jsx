@@ -4,15 +4,35 @@ const categories = [
   {
     title: "Women's Collection",
     items: [
-      { name: "Elegant Dress", image: "/Image/shopping-mall-dummy.jpg", price: "$49.99" },
+      { name: "Elegant Dress", image: "Image/high-fashion-look-glamor-stylish-sexy-smiling-beautiful-young-woman-model-summer-black-hipster-dress.jpg", price: "$49.99" },
       { name: "Casual Outfit", image: "Image/young-woman-beautiful-red-dress.jpg", price: "$29.99" },
-      { name: "Party Wear", image: "/Images/women-party.png", price: "$69.99" },
-      { name: "Evening Gown", image: "/Images/women-evening.png", price: "$89.99" },
-      { name: "Summer Dress", image: "/Images/women-summer.png", price: "$39.99" }
+      { name: "Party Wear", image: "Image/fashionable-girl-red.jpg", price: "$69.99" },
+      { name: "Evening Gown", image: "Image/young-woman-beautiful-yellow-dress.jpg", price: "$89.99" },
+      { name: "Traditional Dress", image: "Image/woman-traditional-dress.jpg", price: "$39.99" }
     ]
   },
   {
     title: "Men's Collection",
+    items: [
+      { name: "Formal Suit", image: "Image/Formal Suit.jpg", price: "$199.99" },
+      { name: "Casual Jacket", image: "Image/Casual Jacket.jpg", price: "$89.99" },
+      { name: "Sportswear", image: "Image/Sportswear.jpg", price: "$59.99" },
+      { name: "Winter Coat", image: "Image/Winter Coat.jpg", price: "$129.99" },
+      { name: "Brown Pant", image: "Image/man-wearing-brown-pants-close-up.jpg.crdownload", price: "$149.99" }
+    ]
+  },
+  {
+    title: "Accessories",
+    items: [
+      { name: "Formal Suit", image: "/Images/men-suit.png", price: "$199.99" },
+      { name: "Casual Jacket", image: "/Images/men-casual.png", price: "$89.99" },
+      { name: "Sportswear", image: "/Images/men-sports.png", price: "$59.99" },
+      { name: "Winter Coat", image: "/Images/men-winter.png", price: "$129.99" },
+      { name: "Leather Jacket", image: "/Images/men-leather.png", price: "$149.99" }
+    ]
+  },
+  {
+    title: "Sales",
     items: [
       { name: "Formal Suit", image: "/Images/men-suit.png", price: "$199.99" },
       { name: "Casual Jacket", image: "/Images/men-casual.png", price: "$89.99" },
@@ -21,6 +41,7 @@ const categories = [
       { name: "Leather Jacket", image: "/Images/men-leather.png", price: "$149.99" }
     ]
   }
+
 ];
 
 const FirstSection = () => {

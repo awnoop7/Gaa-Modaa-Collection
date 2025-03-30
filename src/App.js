@@ -3,6 +3,8 @@ import "./index.css";
 import Navbar from "./Components/Navbar";
 import HeroSection from "./Components/HeroSection";
 import FirstSection from "./Components/FirstSection";
+import Footer from "./Components/FooterSection";
+
 
 const App = () => {
   return (
@@ -10,6 +12,8 @@ const App = () => {
     <Navbar/>
     <HeroSection/>
     <FirstSection/>
+    <Footer/>
+    
   
     </>
   );
