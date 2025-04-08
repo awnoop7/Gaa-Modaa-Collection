@@ -18,27 +18,27 @@ const categories = [
       { name: "Casual Jacket", image: "Image/Casual Jacket.jpg", price: "$89.99" },
       { name: "Sportswear", image: "Image/Sportswear.jpg", price: "$59.99" },
       { name: "Winter Coat", image: "Image/Winter Coat.jpg", price: "$129.99" },
-      { name: "Brown Pant", image: "Image/man-wearing-brown-pants-close-up.jpg.crdownload", price: "$149.99" }
+      { name: "Brown Pant", image: "Image/brown-pants.jpg", price: "$149.99" }
     ]
   },
   {
     title: "Accessories",
     items: [
-      { name: "Formal Suit", image: "/Images/men-suit.png", price: "$199.99" },
-      { name: "Casual Jacket", image: "/Images/men-casual.png", price: "$89.99" },
-      { name: "Sportswear", image: "/Images/men-sports.png", price: "$59.99" },
-      { name: "Winter Coat", image: "/Images/men-winter.png", price: "$129.99" },
-      { name: "Leather Jacket", image: "/Images/men-leather.png", price: "$149.99" }
+      { name: "Men Accessories", image: "Image/Accessories_1.jpg", price: "$199.99" },
+      { name: "Female Accessories", image: "Image/Accessories_for_female.jpg", price: "$89.99" },
+      { name: "Makeup Accessories", image: "Image/Accessories_for_women.jpg", price: "$59.99" },
+      { name: "GentalMen Accessories", image: "Image/Accessories_for _men_care.jpg", price: "$129.99" },
+      { name: "Package Accessories", image: "Image/model-career-kit-still-life.jpg", price: "$149.99" }
     ]
   },
   {
     title: "Sales",
     items: [
-      { name: "Formal Suit", image: "/Images/men-suit.png", price: "$199.99" },
-      { name: "Casual Jacket", image: "/Images/men-casual.png", price: "$89.99" },
-      { name: "Sportswear", image: "/Images/men-sports.png", price: "$59.99" },
-      { name: "Winter Coat", image: "/Images/men-winter.png", price: "$129.99" },
-      { name: "Leather Jacket", image: "/Images/men-leather.png", price: "$149.99" }
+      { name: "Weakly Sales", image: "Image/Sales_1.jpg", price: "$199.99" },
+      { name: "Monthly Sales", image: "Image/Sales_2.jpg", price: "$499.99" },
+      { name: "Summer Sales", image: "Image/Sales_3.jpg", price: "$359.99" },
+      { name: "Coming Soon", image: "Image/Coming  Soon.png", price: "Coming Soon" },
+      { name: "Coming Soon", image: "Image/Coming  Soon.png", price: "Coming Soon" }
     ]
   }
 
@@ -64,10 +64,10 @@ const FirstSection = () => {
                   <h3 className="text-xl font-semibold text-gray-800 mt-4">
                     {item.name}
                   </h3>
-                  <p className="text-lg text-gray-600 mt-2">{item.price}</p> {/* Price added here */}
+                  <p className="text-lg text-gray-600 mt-2">{item.price}</p> {/* Price  */}
                   <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
                     Explore Now
-                  </button>
+                  </button> 
                 </div>
               ))}
             </div>
