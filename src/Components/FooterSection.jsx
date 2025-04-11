@@ -33,7 +33,6 @@ const Footer = () => {
             <a href="#" className="text-gray-400 hover:text-white text-lg"><FaFacebookF /></a>
             <a href="#" className="text-gray-400 hover:text-white text-lg"><FaTwitter /></a>
             <a href="#" className="text-gray-400 hover:text-white text-lg"><FaInstagram /></a>
-            <a href="#" className="text-gray-400 hover:text-white text-lg"><FaLinkedinIn /></a>
           </div>
         </div>
       </div>

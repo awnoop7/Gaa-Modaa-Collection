@@ -24,7 +24,7 @@ function Navbar() {
           <Link to="/womens" className="text-sm font-medium transition-colors hover:text-blue-600">Women</Link>
           <Link to="/mens" className="text-sm font-medium transition-colors hover:text-blue-600">Men</Link>
           <Link to="/accessories" className="text-sm font-medium transition-colors hover:text-blue-600">Accessories</Link>
-          <Link to="/sales" className="text-sm font-medium transition-colors hover:text-blue-600">Sale</Link>
+          <Link to="/sale" className="text-sm font-medium transition-colors hover:text-blue-600">Sales</Link>
         </nav>
 
         {/* Cart Button & Mobile Menu */}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom"; // ✅ Import Link from react-router-dom
 
 const categories = [
   {
@@ -75,11 +76,9 @@ const FirstSection = () => {
                 </div>
               ))}
 
-              {/* See More Card */}
-              <a
-                href={category.link}
-                target="_blank"
-                rel="noopener noreferrer"
+              {/* See More Card using <Link> */}
+              <Link
+                to={category.link}
                 className="flex flex-col items-center justify-center bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-all cursor-pointer"
               >
                 <div className="w-full h-60 flex items-center justify-center bg-gray-200 rounded-lg">
@@ -88,7 +87,7 @@ const FirstSection = () => {
                 <h3 className="text-xl font-semibold text-gray-800 mt-4 text-center">
                   Explore Full Collection
                 </h3>
-              </a>
+              </Link>
             </div>
           </div>
         ))}

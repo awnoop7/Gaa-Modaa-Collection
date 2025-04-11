@@ -4,7 +4,7 @@ const accessoriesItems = [
   { name: "Men Accessories", image: "Image/Accessories_1.jpg", price: "$199.99" },
   { name: "Female Accessories", image: "Image/Accessories_for_female.jpg", price: "$89.99" },
   { name: "Makeup Accessories", image: "Image/Accessories_for_women.jpg", price: "$59.99" },
-  { name: "Gentlemen Accessories", image: "Image/Accessories_for_men_care.jpg", price: "$129.99" },
+  { name: "GentalMen Accessories", image: "Image/Accessories_for _men_care.jpg", price: "$129.99" },
   { name: "Package Accessories", image: "Image/model-career-kit-still-life.jpg", price: "$149.99" }
 ];
 
