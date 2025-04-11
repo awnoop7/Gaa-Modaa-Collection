@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ShoppingBagIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [cartCount] = useState(0);
@@ -13,17 +14,17 @@ function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-white shadow-sm">
       <div className="container mx-auto px-4 flex h-16 items-center justify-between">
         {/* Logo */}
-        <button className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <span className="text-xl font-bold tracking-wider">GAA MODAA</span>
-        </button>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
-          <button className="text-sm font-medium transition-colors hover:text-blue-600">Home</button>
-          <button className="text-sm font-medium transition-colors hover:text-blue-600">Women</button>
-          <button className="text-sm font-medium transition-colors hover:text-blue-600">Men</button>
-          <button className="text-sm font-medium transition-colors hover:text-blue-600">Accessories</button>
-          <button className="text-sm font-medium transition-colors hover:text-blue-600">Sale</button>
+          <Link to="/" className="text-sm font-medium transition-colors hover:text-blue-600">Home</Link>
+          <Link to="/womens" className="text-sm font-medium transition-colors hover:text-blue-600">Women</Link>
+          <Link to="/mens" className="text-sm font-medium transition-colors hover:text-blue-600">Men</Link>
+          <Link to="/accessories" className="text-sm font-medium transition-colors hover:text-blue-600">Accessories</Link>
+          <Link to="/sales" className="text-sm font-medium transition-colors hover:text-blue-600">Sale</Link>
         </nav>
 
         {/* Cart Button & Mobile Menu */}
@@ -55,11 +56,11 @@ function Navbar() {
           </button>
         </div>
         <div className="flex flex-col p-4">
-          <button className="py-3 text-lg border-b border-gray-100" onClick={toggleMenu}>Home</button>
-          <button className="py-3 text-lg border-b border-gray-100" onClick={toggleMenu}>Women</button>
-          <button className="py-3 text-lg border-b border-gray-100" onClick={toggleMenu}>Men</button>
-          <button className="py-3 text-lg border-b border-gray-100" onClick={toggleMenu}>Accessories</button>
-          <button className="py-3 text-lg" onClick={toggleMenu}>Sale</button>
+          <Link to="/" className="py-3 text-lg border-b border-gray-100" onClick={toggleMenu}>Home</Link>
+          <Link to="/womens" className="py-3 text-lg border-b border-gray-100" onClick={toggleMenu}>Women</Link>
+          <Link to="/mens" className="py-3 text-lg border-b border-gray-100" onClick={toggleMenu}>Men</Link>
+          <Link to="/accessories" className="py-3 text-lg border-b border-gray-100" onClick={toggleMenu}>Accessories</Link>
+          <Link to="/sales" className="py-3 text-lg" onClick={toggleMenu}>Sale</Link>
         </div>
       </div>
     </header>
