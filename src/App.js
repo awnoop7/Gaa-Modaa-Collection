@@ -13,6 +13,8 @@ import AboutUs from "./Components/AboutUs";
 import Services from "./Components/Services";
 import Contact from "./Components/Contact";
 import Login from "./Components/Login";
+import OwnerPanel from "./Components/OwnerPanel";
+import OrderPanel from "./Components/OrderPanel";
 
 const App = () => {
   return (
@@ -37,7 +39,9 @@ const App = () => {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/owner" element={<OwnerPanel />} />
+        <Route path="/order" element={<OrderPanel />} />
 
       </Routes>
 

@@ -1,11 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate(); 
+  
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!email || !password) {
@@ -14,10 +18,27 @@ function Login() {
     }
 
     setError("");
-    console.log("Logging in with:", { email, password });
 
-    setEmail("");
-    setPassword("");
+    try {
+      const response = await fetch("http://localhost:5000/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(data.message); // Login success
+        setEmail("");
+        setPassword("");
+        navigate("/owner"); // Redirect only on success
+      } else {
+        setError(data.message);
+      }
+    } catch (err) {
+      setError("Something went wrong. Please try again.");
+    }
   };
 
   return (

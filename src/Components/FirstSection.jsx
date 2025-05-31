@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import OrderPanel from './OrderPanel'; // make sure this path is correct
 
 const categories = [
   {
@@ -49,8 +50,18 @@ const categories = [
 ];
 
 const FirstSection = () => {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const handleOrderClick = (item) => {
+    setSelectedProduct(item);
+  };
+
+  const handleClosePanel = () => {
+    setSelectedProduct(null);
+  };
+
   return (
-    <section className="w-full py-12 bg-gray-100">
+    <section className="w-full py-12 bg-gray-100 relative">
       <div className="max-w-7xl mx-auto px-6">
         {categories.map((category, index) => (
           <div key={index} className="mb-12">
@@ -58,25 +69,27 @@ const FirstSection = () => {
               {category.title}
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6">
-              {/* First 4 items */}
               {category.items.slice(0, 4).map((item, idx) => (
-                <div key={idx} className="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-all">
+                <div
+                  key={idx}
+                  className="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-all"
+                >
                   <img
                     src={item.image}
                     alt={item.name}
                     className="w-full h-60 object-cover rounded-lg"
                   />
-                  <h3 className="text-xl font-semibold text-gray-800 mt-4">
-                    {item.name}
-                  </h3>
+                  <h3 className="text-xl font-semibold text-gray-800 mt-4">{item.name}</h3>
                   <p className="text-lg text-gray-600 mt-2">{item.price}</p>
-                  <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
-                    Explore Now
+                  <button
+                    onClick={() => handleOrderClick(item)}
+                    className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition text-xl"
+                  >
+                    Order Now
                   </button>
                 </div>
               ))}
 
-              {/* See More Card using <Link> */}
               <Link
                 to={category.link}
                 className="flex flex-col items-center justify-center bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-all cursor-pointer"
@@ -92,6 +105,10 @@ const FirstSection = () => {
           </div>
         ))}
       </div>
+
+      {selectedProduct && (
+        <OrderPanel product={selectedProduct} onClose={handleClosePanel} />
+      )}
     </section>
   );
 };
